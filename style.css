@@ -1,0 +1,15 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: red;
+}
+#character-list {
+  margin-bottom: 20px;
+}
+.character {
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+#character-details img {
+  max-width: 200px;
+}
