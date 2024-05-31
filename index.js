@@ -17,9 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-  // Show character details
+  // time to Show character details
   function showCharacterDetails(character) {
-    currentCharacter = character;
+    character = character;
     characterName.textContent = character.name;
     characterImage.src = character.image;
     characterVotes.textContent = character.votes;
@@ -27,8 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Add vote
   voteButton.addEventListener('click', () => {
-    if (currentCharacter) {
-      currentCharacter.votes++;
+    if (Character) {
+      Character.votes++;
       characterVotes.textContent = currentCharacter.votes;
     }
   });
