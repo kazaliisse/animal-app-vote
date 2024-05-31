@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const characterImage = document.getElementById('character-image');
   const characterVotes = document.getElementById('character-votes');
   const voteButton = document.getElementById('vote-button');
+  
+
   // Fetch character list
   fetch('http://localhost:3000/characters')
     .then(response => response.json())
@@ -15,11 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
         div.addEventListener('click', () => showCharacterDetails(character));
         characterList.appendChild(div);
       });
-    });
+    })
+    .catch(error => console.error('Error fetching character list:', error));
 
-  // time to Show character details
+  // Show character details
   function showCharacterDetails(character) {
-    character = character;
+    currentCharacter = character;
     characterName.textContent = character.name;
     characterImage.src = character.image;
     characterVotes.textContent = character.votes;
@@ -27,9 +30,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Add vote
   voteButton.addEventListener('click', () => {
-    if (Character) {
-      Character.votes++;
+    if (currentCharacter) {
+      currentCharacter.votes++;
       characterVotes.textContent = currentCharacter.votes;
     }
   });
 });
+
+

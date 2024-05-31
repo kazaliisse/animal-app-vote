@@ -1,8 +1,11 @@
 body {
-  font-family: Arial, sans-serif;
   margin: 20px;
-  background-color: red;
+  background-color: orangered;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 #character-list {
   margin-bottom: 20px;
 }
@@ -13,8 +16,19 @@ body {
 
 #character-details img {
   max-width: 200px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 20px white;
 
 }
 button{
   padding: 8px;
+  background-color: white;
+  color: black;
+  transition: 0.3s ease-in-out;
+  
+}
+button:hover{
+  background-color: black;
+  color: white;
+  1);
 }
